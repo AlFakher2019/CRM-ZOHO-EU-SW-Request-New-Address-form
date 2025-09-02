@@ -98,18 +98,19 @@
                             </div>
                             <div class="zf-clearBoth"></div>
                         </div>
-                        <div class="zf-tempFrmWrapper  zf-large "><label class="zf-labelName">
-                                Email
+                        <div class="zf-tempFrmWrapper  zf-large " style="display:none;"><label class="zf-labelName" >
+                               Email
                             </label>
                             <div class="zf-tempContDiv">
                                 <span>
-                                    <input type="text" name="Email" checktype="c5" value="" maxlength="255" fieldType=9
+                                    <input type="hidden" name="Email" checktype="c5" value="" maxlength="255" fieldType=9
                                         placeholder="" /> </span>
                                 <p id="Email_error" class="zf-errorMessage" style="display: none;">enter a valid email
                                 </p>
                             </div>
                             <div class="zf-clearBoth"></div>
                         </div>
+
                         <div class="zfgridLabelCont"><label>Address</label>
 
                         </div>
@@ -124,7 +125,7 @@
                                         <div class="zf-tempContDiv">
                                             <select class="zf-form-sBox gds-cr" name="Dropdown" checktype="c1"
                                                 id="country">
-                                                 <option value="">-- Select Country --</option>
+                                                 <option value="">Select Country</option>
                                             </select>
 
                                             <p id="Dropdown_error" class="zf-errorMessage" style="display:none;">Invalid
@@ -132,7 +133,7 @@
                                         </div>
                                         <div class="zf-clearBoth"></div>
                                     </div>
-                                    <div class="zf-tempFrmWrapper  zf-small "><label class="zf-labelName">
+                                    <!-- <div class="zf-tempFrmWrapper  zf-small "><label class="zf-labelName">
                                             Address Type
                                             <em class="zf-important"> *</em>
                                         </label>
@@ -150,7 +151,7 @@
                                                 select Correct value</p>
                                         </div>
                                         <div class="zf-clearBoth"></div>
-                                    </div>
+                                    </div> -->
                                 </div>
                             </div>
                         </div>
@@ -204,7 +205,7 @@
                                         <div class="zf-tempContDiv">
                                             <select class="zf-form-sBox" name="Dropdown1" checktype="c1"
                                                 id="state">
-                                                <option value="">-- Select State --</option>
+                                                <option value="">Select State</option>
                                             </select>
                                             <p id="Dropdown1_error" class="zf-errorMessage" style="display:none;">
                                                 Please select a valid state</p>
@@ -252,8 +253,8 @@
     <script type="text/javascript">var dateAndMonthRegexFormateArray = zf_SetDateAndMonthRegexBasedOnDateFormate('dd-MMM-yyyy');
         var zf_DateRegex = new RegExp(dateAndMonthRegexFormateArray[0]);
         var zf_MonthYearRegex = new RegExp(dateAndMonthRegexFormateArray[1]);
-        var zf_MandArray = ["Name_First", "Name_Last", "PhoneNumber_countrycode", "Dropdown", "Dropdown3", "SingleLine", "SingleLine2", "Dropdown1", "SingleLine3"];
-        var zf_FieldArray = ["Name_First", "Name_Last", "PhoneNumber_countrycode", "Email", "Dropdown", "Dropdown3", "SingleLine", "SingleLine2", "SingleLine1", "Dropdown1", "SingleLine3", "Checkbox"];
+        var zf_MandArray = ["Name_First", "Name_Last", "PhoneNumber_countrycode", "Dropdown",  "SingleLine", "SingleLine2", "Dropdown1", "SingleLine3"];
+        var zf_FieldArray = ["Name_First", "Name_Last", "PhoneNumber_countrycode", "Email", "Dropdown", "SingleLine", "SingleLine2", "SingleLine1", "Dropdown1", "SingleLine3", "Checkbox"];
         var isSalesIQIntegrationEnabled = false;
         var salesIQFieldsArray = [];</script>
     
@@ -297,5 +298,22 @@ async function loadCountries() {
 // Load on page start
 loadCountries();
 </script>
+
+<script>
+  window.addEventListener("message", function (event) {
+    var email = event.data;
+    document.getElementById("Email").value = email;
+
+    let checkField = setInterval(function () {
+      if ($("#Email").val() !== "") {
+        $("#loader").hide();
+        clearInterval(checkField);
+      }
+    }, 100);
+
+    $("#loader").hide();
+  });
+</script>
+
 </body>
 </html>
