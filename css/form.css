@@ -1230,7 +1230,7 @@ width: 223px;
 .zfthreeColumn {
 	display: flex;
   	flex-wrap: nowrap;
-	gap: 32px;
+	gap: 22px;
 }
 .zfoneColumn .zfCol{
 	max-width: 100%;
@@ -1554,6 +1554,8 @@ width: 223px;
     letter-spacing: 0.2px;
 }
 
+/* Reverted custom name-row overrides */
+
 @media (max-width: 768px) {
   
 
@@ -1630,4 +1632,5 @@ width: 223px;
   }
 }
 
-/* dsd */
+
+
