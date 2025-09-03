@@ -203,7 +203,7 @@ ol, ul {
 }
 
 .zf-tempFrmWrapper {
-	padding: 6px 20px 6px 0px;
+	padding: 6px 0px 6px 0px;
     margin: 0;
     box-sizing: border-box;
 }
@@ -718,7 +718,7 @@ ol, ul {
 	font-weight: 600;
     padding: 13px 38px;
 	margin-bottom: 20px;
-	margin-top: 20px;
+	/* margin-top: 20px; */
 }
 
 .zf-submitColor {
@@ -745,7 +745,7 @@ ol, ul {
 /****************Field Small/Medium/Large Starts Here****************/
 
 .zf-small .zf-tempContDiv input[type="text"], .zf-small .zf-tempContDiv textarea, .zf-small .zf-mSelect select, .zf-small .zf-tempContDiv .zf-sliderCont, .zf-small .zf-tempContDiv .zf-pdfTextArea, .zf-small .zf-signContainer{
-	width:50%;
+	width:48.649%;
 	}
 .zf-medium .zf-tempContDiv input[type="text"], .zf-medium .zf-tempContDiv textarea, .zf-medium .zf-mSelect select, .zf-medium .zf-tempContDiv .zf-sliderCont, .zf-medium .zf-tempContDiv .zf-pdfTextArea, .zf-medium .zf-signContainer{
 	width:75%;
@@ -757,7 +757,7 @@ ol, ul {
 	width:100%;
 }
 .zf-small .zf-tempContDiv .zf-form-sBox{
-	width:47.649%;
+	width:48.649%;
 	}
 .zf-medium .zf-tempContDiv .zf-form-sBox{
 	width:75%;
@@ -1230,7 +1230,7 @@ width: 223px;
 .zfthreeColumn {
 	display: flex;
   	flex-wrap: nowrap;
-	gap: 22px;
+	gap: 18px;
 }
 .zfoneColumn .zfCol{
 	max-width: 100%;
