@@ -240,17 +240,15 @@
                             </div>
                             <div class="zf-clearBoth"></div>
                         </div>
-                        <div class="zf-checkbox zf-tempFrmWrapper zf-oneColumns">
+                        <div class="zf-tempFrmWrapper zf-decesion">
                             <div class="zf-tempContDiv">
-                                <div class="zf-overflow">
-                                    <span class="zf-multiAttType">
-                                        <input class="zf-checkBoxType" type="checkbox" id="Checkbox_1" name="Checkbox"
-                                            checktype="c1" value="Save as default billing address" />
-                                        <label for="Checkbox_1" class="zf-checkChoice">Save as default billing
-                                            address</label> </span>
-                                    <div class="zf-clearBoth"></div>
-                                </div>
-                                <p id="Checkbox_error" class="zf-errorMessage" style="display:none;">Invalid value</p>
+                                <input type="checkbox" checktype="c1" id="DecisionBox" name="DecisionBox" /><label for="DecisionBox"
+                                    class="zf-labelName">
+                                    Save as default billing address
+                                </label>
+                                <p id="DecisionBox_error" class="zf-errorMessage" style="display: none">
+                                    Invalid value
+                                </p>
                             </div>
                             <div class="zf-clearBoth"></div>
                         </div>
@@ -266,7 +264,7 @@
         var zf_DateRegex = new RegExp(dateAndMonthRegexFormateArray[0]);
         var zf_MonthYearRegex = new RegExp(dateAndMonthRegexFormateArray[1]);
         var zf_MandArray = ["Name_First", "Name_Last", "PhoneNumber_countrycode", "Dropdown",  "SingleLine", "SingleLine2", "Dropdown1", "SingleLine3"];
-        var zf_FieldArray = ["Name_First", "Name_Last", "PhoneNumber_countrycode", "Email", "Dropdown", "SingleLine", "SingleLine2", "SingleLine1", "Dropdown1", "SingleLine3", "Checkbox","SingleLine5"];
+        var zf_FieldArray = ["Name_First", "Name_Last", "PhoneNumber_countrycode", "Email", "Dropdown", "SingleLine", "SingleLine2", "SingleLine1", "Dropdown1", "SingleLine3","DecisionBox","SingleLine5"];
         var isSalesIQIntegrationEnabled = false;
         var salesIQFieldsArray = [];</script>
     
