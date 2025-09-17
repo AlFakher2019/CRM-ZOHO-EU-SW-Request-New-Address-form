@@ -5,9 +5,11 @@
     <title>Request New Address Form</title>
     <link href="css/form.css" rel="stylesheet" type="text/css">
     <script src="js/validation.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+
 
 </head>
 
@@ -324,18 +326,20 @@ if (stateSelect && hiddenStateField) {
 </script>
 
 <script>
-  window.addEventListener("message", function (event) {
-    var email = event.data;
-    document.getElementById("Email").value = email;
+  document.addEventListener("DOMContentLoaded", function () {
+    window.addEventListener("message", function (event) {
+      var email = event.data;
+      document.getElementById("Email").value = email;
 
-    let checkField = setInterval(function () {
-      if ($("#Email").val() !== "") {
-        $("#loader").hide();
-        clearInterval(checkField);
-      }
-    }, 100);
+      let checkField = setInterval(function () {
+        if ($("#Email").val() !== "") {
+          $("#loader").hide();
+          clearInterval(checkField);
+        }
+      }, 100);
 
-    $("#loader").hide();
+      $("#loader").hide();
+    });
   });
 </script>
 <script>
